@@ -1,4 +1,4 @@
-//import { Children } from "react";
+// import { Children } from "react";
 import styles from "./Category.module.css";
 
 function Category ({ category, children }){
