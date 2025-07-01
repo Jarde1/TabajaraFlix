@@ -27,25 +27,25 @@ function App() {
       <Banner image="home1"/>
       <Container>
 
-        <Category category="Amistoso">
+        <Category category={categories[0]}>
            {filterCategory(0).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
-        <Category category="Senário">
+        <Category category={categories[1]}>
            {filterCategory(1).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
-        <Category category="Campeonato Brasileiro">
+        <Category category={categories[2]}>
            {filterCategory(2).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
-        <Category category="Speed">
+        <Category category={categories[3]}>
            {filterCategory(3).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
-        <Category category="LA Paintball">
+        <Category category={categories[4]}>
            {filterCategory(4).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
-        <Category category="Jogo Contra">
+        <Category category={categories[5]}>
            {filterCategory(5).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
-        <Category category="Pilares">
+        <Category category={categories[6]}>
            {filterCategory(6).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
 
