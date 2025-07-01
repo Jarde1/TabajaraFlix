@@ -6,6 +6,19 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import videos from "./json/videos.json";
 
+const categories = [
+  "Amistoso",
+  "Senário",
+  "Campeonato Brasileiro",
+  "Speed",
+  "LA Paintball",
+  "Jogo Contra",
+  "Pilares"
+]
+
+function filterCategory(id){
+  return videos.filter(video => video.category === categories[id]);
+}
 
 function App() {
   return (
@@ -13,21 +26,29 @@ function App() {
       <Header />
       <Banner image="home1"/>
       <Container>
-        {/* <section className="cards">
-           
-           {
-            videos.map(videos => {
-              return <Card id={videos.id} key={videos.id} />
-            })
-           }
-        </section> */}
-         {/* <h2>Geografia</h2>
-         <section className="cards">
-           {videos.map(videos =>  <Card id={videos.id} key={videos.id} /> )}
-        </section> */}
-        <Category category="LA Paintball">
-           {videos.map(videos => <Card id={videos.id} key={videos.id} /> )}
+
+        <Category category="Amistoso">
+           {filterCategory(0).map(videos => <Card id={videos.id} key={videos.id} /> )}
         </Category>
+        <Category category="Senário">
+           {filterCategory(1).map(videos => <Card id={videos.id} key={videos.id} /> )}
+        </Category>
+        <Category category="Campeonato Brasileiro">
+           {filterCategory(2).map(videos => <Card id={videos.id} key={videos.id} /> )}
+        </Category>
+        <Category category="Speed">
+           {filterCategory(3).map(videos => <Card id={videos.id} key={videos.id} /> )}
+        </Category>
+        <Category category="LA Paintball">
+           {filterCategory(4).map(videos => <Card id={videos.id} key={videos.id} /> )}
+        </Category>
+        <Category category="Jogo Contra">
+           {filterCategory(5).map(videos => <Card id={videos.id} key={videos.id} /> )}
+        </Category>
+        <Category category="Pilares">
+           {filterCategory(6).map(videos => <Card id={videos.id} key={videos.id} /> )}
+        </Category>
+
       </Container>
       <Footer />
     </>
