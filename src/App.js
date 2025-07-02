@@ -9,7 +9,7 @@ import videos from "./json/videos.json";
 const categories = [
   "Amistoso",
   "Cenário",
-  "Campeonato Brasileiro",
+  "Campeonato",
   "Speed",
   "LA Paintball",
   "Jogo Contra",
